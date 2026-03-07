@@ -1,0 +1,30 @@
+.custom-navbar {
+  backdrop-filter: blur(16px);
+  font-family: "Lato", sans-serif;
+}
+
+.nav-item:hover {
+  font-weight: bold;
+  text-shadow:
+    0 0 10px  #d53369,
+    0 0 20px #daae51;
+}
+
+@media(max-width: 575.99px) {
+  .navbar {
+    position: fixed;
+    width: 100vw;
+    text-align: center;
+    backdrop-filter: blur(32px);
+    z-index: 1050;
+    margin: 0;
+    padding: 0;
+  }
+  .navbar-collapse.show {
+    min-height: 100vh;
+    justify-content: center;
+  }
+  .navbar-nav .nav-item {
+    width: 100vw;
+  }
+}

@@ -1,0 +1,85 @@
+body {
+    overflow: hidden;
+    background: black;
+}
+
+.hero {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    background-image: url("/media/images/world_cities.jpg");
+    background-size: cover;
+}
+
+h1 {
+    color: rgb(128, 0, 0);
+    font-family: "Crimson text", sans-serif;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 1050;
+    font-size: 8vw;
+    letter-spacing: 1vw;
+    text-align: center;
+    margin-top: 8%;
+    text-shadow: 0 0 4px #7b0d0d;
+
+}
+
+#clip-video {
+    margin: 0;
+    position: fixed;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.puzzleMask {
+    position: fixed;
+    border: 2px solid white;
+    cursor: grab;
+    will-change: transform;
+    border-radius: 4px;
+    z-index: 1000;
+    width: 300px;
+    height: 150px;
+}
+
+.puzzleMask canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.coordinates {
+    position: absolute;
+    top: -16px;
+    left: -px;
+    font-family: "Lato", sans-serif;
+    font-size: 1vw;
+    color: black;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.globalSpace {
+    position: absolute;
+    top: 80vh;
+    left: 90vw;
+    font-family: "Lato", sans-serif;
+    color: red;
+    pointer-events: none;
+    z-index: 1000;
+    will-change: transform, opacity;
+    transition: opacity 1s ease, transform 1s ease;
+    text-align: right;
+    border: 1px solid white;
+    white-space: nowrap;
+    backdrop-filter: blur(4px);
+    padding: 1vw;
+    text-shadow: 0 0 4px #7b0d0d;
+
+}
