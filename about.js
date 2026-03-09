@@ -54,8 +54,8 @@ function initMasks() {
             h: r.height
         });
         mask.style.left = "0";
-        mask.style.top = "16vh";
-        mask.style.transform = `translate(${r.left}px, ${r.top}px, 0)`;
+        mask.style.top = "0";
+        mask.style.transform = `translate3d(${r.left}px, ${r.top}px, 0)`;
 
     });
 }
