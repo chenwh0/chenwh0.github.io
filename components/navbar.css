@@ -1,6 +1,7 @@
-.custom-navbar {
+.navbar-custom {
   backdrop-filter: blur(16px);
   font-family: "Lato", sans-serif;
+  text-shadow: 0 0 2px black;
 }
 
 .nav-item:hover {
@@ -11,14 +12,15 @@
 }
 
 @media(max-width: 575.99px) {
-  .navbar {
+  .navbar-custom {
     position: fixed;
-    width: 100vw;
+    width: 100%;
     text-align: center;
     backdrop-filter: blur(32px);
     z-index: 1050;
     margin: 0;
     padding: 0;
+    text-shadow: 0 0 4px black;
   }
   .navbar-collapse.show {
     min-height: 100vh;

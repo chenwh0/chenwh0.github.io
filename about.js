@@ -1,15 +1,8 @@
 const video = document.querySelector("#clip-video");
-const masks = document.querySelectorAll(".puzzleMask");
-const globalSpace = document.querySelector(".globalSpace");
+const masks = document.querySelectorAll(".mask");
 let isHoveringMask = false;
 const state = new Map();
 
-document.addEventListener("mousemove", element => {
-    if (!isHoveringMask) {
-        globalSpace.innerHTML = `X: ${element.clientX} <br/> Y: ${element.clientY}`;
-    }
-    globalSpace.style.transform = `translate3d(${element.clientX + 2}), ${element.clientY + 2}, 0)`;
-});
 
 function updateCoordinates (mask) {
     const s = state.get(mask);
@@ -64,13 +57,6 @@ function initMasks() {
         mask.style.top = "16vh";
         mask.style.transform = `translate(${r.left}px, ${r.top}px, 0)`;
 
-        mask.addEventListener("mouseenter", () => {
-            isHoveringMask = true;
-            globalSpace.textContent = "PAUSE";
-        });
-        mask.addEventListener("mouseleave", () => {
-            isHoveringMask = false;
-        });
     });
 }
 

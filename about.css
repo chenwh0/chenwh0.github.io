@@ -19,7 +19,7 @@ h1 {
     width: 100%;
     display: flex;
     justify-content: center;
-    z-index: 1050;
+    z-index: 1000;
     font-size: 8vw;
     letter-spacing: 1vw;
     text-align: center;
@@ -37,49 +37,50 @@ h1 {
     pointer-events: none;
 }
 
-.puzzleMask {
+.mask {
     position: fixed;
     border: 2px solid white;
     cursor: grab;
     will-change: transform;
     border-radius: 4px;
-    z-index: 1000;
-    width: 300px;
-    height: 150px;
+    z-index: 900;
+    opacity: 0.92;
 }
 
-.puzzleMask canvas {
+.mask canvas {
     width: 100%;
     height: 100%;
     display: block;
 }
 
+.mask0 {
+    width: 320px;
+    height: 180px;
+}
+.mask1 {
+    width: 100px;
+    height: 400px;
+}
+.mask2 {
+    width: 300px;
+    height: 150px;
+}
+.mask3 {
+    width: 160px;
+    height: 200px;
+}
+.mask4 {
+    width: 400px;
+    height: 300px;
+}
+
 .coordinates {
     position: absolute;
-    top: -16px;
-    left: -px;
+    top: -3vh;
+    left: -1vw;
     font-family: "Lato", sans-serif;
     font-size: 1vw;
     color: black;
     pointer-events: none;
     white-space: nowrap;
-}
-
-.globalSpace {
-    position: absolute;
-    top: 80vh;
-    left: 90vw;
-    font-family: "Lato", sans-serif;
-    color: red;
-    pointer-events: none;
-    z-index: 1000;
-    will-change: transform, opacity;
-    transition: opacity 1s ease, transform 1s ease;
-    text-align: right;
-    border: 1px solid white;
-    white-space: nowrap;
-    backdrop-filter: blur(4px);
-    padding: 1vw;
-    text-shadow: 0 0 4px #7b0d0d;
-
 }

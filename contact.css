@@ -1,22 +1,22 @@
-
-.custom-container {
+.body {
+  overflow-x: hidden;
+}
+.container-custom {
   font-family: "Lato", sans-serif;
-  color: rgb(180, 0, 0);
-  text-shadow: 0 0 4px rgb(180, 0, 0);
   backdrop-filter: blur(4px);
   border: 2px solid rgb(250, 250, 250);
   border-radius: 4px;
   margin-top: 20%;
   text-align: right;
-  max-width: 60%;
-  padding: 2%;
 }
-.custom-h1 {
+.h1-custom {
+  color: rgb(180, 0, 0);
+  text-shadow: 0 0 4px rgb(180, 0, 0);
   font-family: "Crimson Text", sans-serif;
   letter-spacing: .5vw;
 }
-.custom-container:hover {
-  box-shadow: 0 0 16px gray;
+.container-custom:hover {
+  box-shadow: 0 0 4vw gray;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
@@ -24,36 +24,39 @@
   font-family: "Lato", sans-serif;
   background-color: rgb(180, 0, 0);
   border: none;
+  margin-bottom: 2%;
 }
 .btn-custom:hover {
   background-color: rgb(210, 0, 0);
   border: none;
 }
-.custom-a {
+.a-custom {
   color: black;
   text-decoration: underline;
   text-shadow: none;
 }
-
-img {
-    position: fixed;
-    bottom: 2rem;
-    left: 2rem;
-    width: clamp(256px, 64vmin, 512px);
-    height: auto;
-	opacity: 0;
-	animation: fadeIn 1s ease-in forwards;
-    z-index: -1;
+.container-background-custom {
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+  background-image: url("/media/images/cat.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100vh;
+  width: 70%;
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+  z-index: -1;
 }
+
 @keyframes fadeIn {
 	from { opacity: 0; } 
 	to { opacity: 1; }
 }
 
 @media(max-width: 575.99px) {
-  .custom-container {
+  .container-custom {
     margin-top: 40%;
-    max-width: 80%;
     border: 2px solid white;
+    box-shadow: 0 0 1vw gray;
   }
 }
