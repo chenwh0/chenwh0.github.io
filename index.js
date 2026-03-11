@@ -21,7 +21,7 @@ video.addEventListener("loadedmetadata", () => {
   });
 
   function animate() {
-    video.currentTime += (targetTime - video.currentTime) * 0.2; 
+    video.currentTime += (targetTime - video.currentTime) * 0.1; 
     requestAnimationFrame(animate);
   }
 
@@ -35,8 +35,8 @@ gsap.set(".resume-item", {yPercent: 100, opacity: 0});
 gsap.utils.toArray(".resume-item").forEach((element) => {
   ScrollTrigger.create({
     trigger: element,
-    start: "top 75%",
-    end: "bottom 60%",
+    start: "top 90%",
+    end: "bottom 80%",
     toggleActions: "play reverse play reverse",
     onEnter: () => gsap.to(element, fadeIn),
     onEnterBack: () => gsap.to(element, fadeIn),
